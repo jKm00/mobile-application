@@ -36,6 +36,14 @@ the app in with the `-d` flag
 flutter run -d name/id_of_simulator
 ```
 
+### Flutter packages
+
+Gets all the packages necessary for the project. _npm install_
+
+```
+flutter packages get
+```
+
 ### Open simulator on Mac
 
 Opens an iphone simulator. _Not 100% sure, but think xcode has to be installed for this to work_

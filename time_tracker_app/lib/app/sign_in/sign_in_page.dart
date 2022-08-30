@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:time_tracker_app/common_widgets/custom_raised_button.dart';
+import 'package:time_tracker_app/app/sign_in/sign_in_button.dart';
+import 'package:time_tracker_app/app/sign_in/social_sign_in_button.dart';
 
 class SignInPage extends StatelessWidget {
   @override
@@ -15,7 +16,6 @@ class SignInPage extends StatelessWidget {
   }
 
   Widget _buildContent() {
-    const buttonHeight = 100.0;
     const columnSpacing = 8.0;
 
     return Padding(
@@ -32,17 +32,44 @@ class SignInPage extends StatelessWidget {
               fontWeight: FontWeight.w600,
             ),
           ),
-          const SizedBox(height: columnSpacing),
-          CustomRaisedButton(
+          const SizedBox(height: 48.0),
+          SocialSignInButton(
+            text: 'Sign in with Google',
+            imagePath: 'images/google-logo.png',
+            textColor: Colors.black87,
             color: Colors.white,
             onPressed: () {},
-            child: const Text(
-              'Sign in with Google',
-              style: TextStyle(
-                color: Colors.black87,
-                fontSize: 15.0,
-              ),
+          ),
+          const SizedBox(height: columnSpacing),
+          SocialSignInButton(
+            text: 'Sign in with Facebook',
+            imagePath: 'images/facebook-logo.png',
+            color: const Color(0xFF334D92),
+            textColor: Colors.white,
+            onPressed: () {},
+          ),
+          const SizedBox(height: columnSpacing),
+          SignInButton(
+            text: 'Sign in with email',
+            color: Colors.teal,
+            textColor: Colors.white,
+            onPressed: () {},
+          ),
+          const SizedBox(height: columnSpacing),
+          const Text(
+            'or',
+            style: TextStyle(
+              fontSize: 14.0,
+              color: Colors.black87,
             ),
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(height: columnSpacing),
+          SignInButton(
+            text: 'Go anonymous',
+            color: Colors.lime,
+            textColor: Colors.black,
+            onPressed: () {},
           ),
         ],
       ),
