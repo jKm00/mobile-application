@@ -37,6 +37,13 @@
             {
               "client_id": "682580151127-1r6gnttpld691jslo4h5ruemgmuli2vi.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "682580151127-opf9rj4ig71501vd4l8lohlvka3h07hp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.timeTrackerApp"
+              }
             }
           ]
         }
