@@ -35,10 +35,13 @@ class _LandingPageState extends State<LandingPage> {
         auth: widget.auth,
         onSignIn: _updateUser,
       );
+    } else {
+      return HomePage(
+        auth: widget.auth,
+        onSignOut: () => _updateUser(null),
+        user:
+            _user!, // Know that _user is not null at this point, therefore use "!"
+      );
     }
-    return HomePage(
-      auth: widget.auth,
-      onSignOut: () => _updateUser(null),
-    );
   }
 }
