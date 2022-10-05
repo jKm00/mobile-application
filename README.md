@@ -29,6 +29,12 @@ in that simulator. If not you can chose to open the app in a browser like chrome
 flutter run
 ```
 
+If the main file is not called main, use: (needs to contain the main()-method, as this is the entrypoint)
+
+```
+flutter run -t lib/filename.dart
+```
+
 If you have multiple siumlators you can specify which simulator you want to open
 the app in with the `-d` flag
 
